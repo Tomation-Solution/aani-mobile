@@ -20,7 +20,9 @@ const ViewGallery = ({navigation, route}) => {
             <Image  
             resizeMode='cover'
             style={tw`h-full w-full rounded-lg`}
-            source={{uri: route.params.data.photo_file}}/>
+            // source={{uri: route.params.data.photo_file}}
+            source={{uri: route.params.data.images[0].image}}
+            />
             :<></>
             }
         </View>

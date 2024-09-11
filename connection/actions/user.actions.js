@@ -156,7 +156,8 @@ export const GetGallery = async (status, callback,errcallback,extra) => {
   console.log('extras',extra)
   try {
     const response = await api.get(
-      `tenant/aani/tenant/extras/galleryview/member_get_gallery/${extra !== undefined ? '?'+extra : ''}`
+      // `tenant/aani/tenant/extras/galleryview/member_get_gallery/${extra !== undefined ? '?'+extra : ''}`
+      `/tenant/aani/tenant/extras/gallery_version2/`
     );
 
     if (response.status == 200) {

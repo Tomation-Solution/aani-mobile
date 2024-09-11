@@ -98,7 +98,8 @@ class Gallery extends Component{
             ({item}) => (
               <Pressable style={tw`w-1/2`}  onPress={()=>this.props.navigation.navigate('viewGallery', {data:item})}>
                 <GalleryCard
-                  image={item.photo_file}
+                  // image={item.photo_file}
+                  image={item.images && item.images.length > 0 ? item.images[0].image : null} 
                   head={item.name}
                   navigation ={this.props.navigation}
                 />

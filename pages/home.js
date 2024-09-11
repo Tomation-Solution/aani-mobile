@@ -216,7 +216,10 @@ const Home = ({navigation, route}) => {
                     <Text style={tw`text-base font-bold mb-2`}> Latest Update </Text>
                   <PanGestureHandler onGestureEvent={gestureHandler}>
                     <Animated.View style={[tw`flex-row`,scrollHorizontal]}>
-                      {gallery.map((image,index) => <Image resizeMode='stretch' resizeMethod='auto' key={index} style={tw`h-56 mx-3 w-11/12 rounded-lg`} source={{uri: image.photo_file}}/>)}
+                      {gallery.map((image,index) => <Image resizeMode='stretch' resizeMethod='auto' key={index} style={tw`h-56 mx-3 w-11/12 rounded-lg`} 
+                      // source={{uri: image.photo_file}}
+                      source={{uri: image.images[0].image}}
+                      />)}
                     </Animated.View>
                   </PanGestureHandler>
                   </>
